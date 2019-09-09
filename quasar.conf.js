@@ -99,13 +99,13 @@ module.exports = function (ctx) {
       // workboxPluginMode: 'InjectManifest',
       // workboxOptions: {}, // only for NON InjectManifest
       manifest: {
-        // name: 'WhatsAppAnyone',
-        // short_name: 'WhatsAppAnyone',
+        name: 'WhatsAppAnyone',
+        short_name: 'WhatsAppAnyone',
         // description: 'A lame app',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
-        theme_color: '#027be3',
+        theme_color: '#009889',
         icons: [
           {
             'src': 'statics/icons/icon-128x128.png',
