@@ -1,7 +1,7 @@
 {
   "name": "waa",
   "version": "0.0.1",
-  "description": "A lame app",
+  "description": "Send WhatsApp messages to anyone. Including people not in your contact list and without saving the numbers.",
   "productName": "WhatsAppAnyone",
   "cordovaId": "org.cordova.quasar.app",
   "author": "kennyki <knyki.12@gmail.com>",

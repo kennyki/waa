@@ -53,6 +53,16 @@
           label="Message"
         />
       </div>
+      <br />
+      <p class="text-center"><small><em>
+        This opens your installed WhatsApp application
+        <br />
+        with the entered phone number. Nothing else.
+        <br /><br />
+        You can do it manually with the URL scheme below:
+        <br />
+        https://api.whatsapp.com/send?phone=&lt;code&gt;&lt;number&gt;
+      </em></small></p>
     </q-form>
   </q-page>
 </template>

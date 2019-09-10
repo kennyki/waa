@@ -1,6 +1,6 @@
-# WhatsAppAnyone (waa)
+# WhatsAppAnyone (WAA)
 
-A lame app
+Send WhatsApp messages to anyone. Including people not in your contact list and without saving the numbers.
 
 ## Install the dependencies
 ```bash
