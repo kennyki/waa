@@ -101,7 +101,7 @@ module.exports = function (ctx) {
       manifest: {
         name: 'WhatsAppAnyone',
         short_name: 'WhatsAppAnyone',
-        // description: 'A lame app',
+        description: 'Send WhatsApp messages to anyone. Including people not in your contact list and without saving the numbers.',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
