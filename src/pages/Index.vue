@@ -61,6 +61,8 @@
 </style>
 
 <script>
+import { openURL } from 'quasar'
+
 export default {
   name: 'PageIndex',
   data () {
@@ -110,7 +112,7 @@ export default {
         ? `https://api.whatsapp.com/send?phone=${phone}`
         : `https://web.whatsapp.com/send?phone=${phone}`
 
-      window.location = url
+      openURL(url)
     },
     validateNumber (val) {
       if (!val) {
