@@ -34,6 +34,8 @@ module.exports = function (ctx) {
       components: [
         'QLayout',
         'QHeader',
+        'QDrawer',
+        'QScrollArea',
         'QAjaxBar',
         'QForm',
         'QInput',
