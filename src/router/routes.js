@@ -8,6 +8,10 @@ const routes = [
         path: '',
         component: () => import('pages/Index.vue'),
         props: route => route.query
+      },
+      {
+        path: 'help',
+        component: () => import('pages/Help.vue')
       }
     ]
   }

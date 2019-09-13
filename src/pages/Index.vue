@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex flex-center">
+  <q-page class="flex flex-center q-py-lg q-px-sm">
     <q-form
       class="q-gutter-md"
       style="min-width: 300px"
@@ -53,16 +53,9 @@
           label="Message"
         />
       </div>
-      <br />
-      <p class="text-center"><small><em>
-        This opens your installed WhatsApp application
-        <br />
-        with the entered phone number. Nothing else.
-        <br /><br />
-        You can do it manually with the URL scheme below:
-        <br />
-        https://api.whatsapp.com/send?phone=&lt;code&gt;&lt;number&gt;
-      </em></small></p>
+      <p class="text-center">
+        <router-link to="/help">Help</router-link>
+      </p>
     </q-form>
   </q-page>
 </template>
