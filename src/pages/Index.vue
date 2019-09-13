@@ -75,6 +75,7 @@ import { openURL } from 'quasar'
 
 export default {
   name: 'PageIndex',
+  props: ['phone'],
   data () {
     return {
       codes: [],
@@ -90,6 +91,15 @@ export default {
       const { data } = await this.$axios.get('https://api.nimblebin.com/b/phone-codes')
 
       this.codes = data.content.list
+
+      if (this.phone) {
+        // it starts with either '%2B' or '%20' (result of pasting number directly in the browser)
+        const hasPlus = this.phone.indexOf('+') === 0 ||
+          this.phone.indexOf(' ') === 0
+
+        this.code = `+${this.phone.substring(hasPlus ? 1 : 0, hasPlus ? 3 : 2)}`
+        this.number = this.phone.substring(hasPlus ? 3 : 2)
+      }
     } catch (error) {
       this.$q.notify({
         color: 'red-5',
