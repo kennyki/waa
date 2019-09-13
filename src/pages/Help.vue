@@ -2,9 +2,11 @@
   <q-page class="q-py-lg q-px-sm">
     <q-list bordered class="rounded-borders">
       <q-expansion-item
-        expand-separator
         default-opened
-        label="What it does?"
+        group="default"
+        expand-separator
+        header-class="text-primary"
+        label="How it works?"
       >
         <q-separator />
         <q-card>
@@ -14,6 +16,21 @@
             You can do it manually with the URL scheme below:
             <br />
             <code>https://api.whatsapp.com/send?phone=&lt;code&gt;&lt;number&gt;</code>
+          </q-card-section>
+        </q-card>
+      </q-expansion-item>
+      <q-expansion-item
+        group="default"
+        expand-separator
+        header-class="text-primary"
+        label="[Shortcut] Prefill phone number"
+      >
+        <q-separator />
+        <q-card>
+          <q-card-section>
+            You can prefill with the URL scheme below:
+            <br />
+            <code>https://whatsapp-anyone.web.app?phone=&lt;code&gt;&lt;number&gt;</code>
           </q-card-section>
         </q-card>
       </q-expansion-item>

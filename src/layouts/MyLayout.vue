@@ -16,6 +16,25 @@
         <q-list>
           <q-item
             v-ripple
+            to="/"
+            exact
+          >
+            <q-item-section avatar>
+              <q-icon name="home"></q-icon>
+            </q-item-section>
+            <q-item-section>Home</q-item-section>
+          </q-item>
+          <q-item
+            v-ripple
+            to="/help"
+          >
+            <q-item-section avatar>
+              <q-icon name="help"></q-icon>
+            </q-item-section>
+            <q-item-section>Help</q-item-section>
+          </q-item>
+          <q-item
+            v-ripple
             clickable
             tag="a"
             href="https://github.com/kennyki/waa"
@@ -25,6 +44,9 @@
               <q-icon name="star"></q-icon>
             </q-item-section>
             <q-item-section>GitHub</q-item-section>
+            <q-item-section avatar>
+              <q-icon name="open_in_new"></q-icon>
+            </q-item-section>
           </q-item>
         </q-list>
       </q-scroll-area>
