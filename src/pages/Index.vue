@@ -5,7 +5,7 @@
       style="min-width: 300px"
       @submit='onSubmit'
     >
-      <h1 class="text-h6 text-justify">
+      <h1 class="text-h6">
         Send WhatsApp messages to anyone.
         <br />
         <span class="text-body1">
