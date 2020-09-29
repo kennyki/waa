@@ -18,7 +18,6 @@
         v-model="code"
         label="Phone code"
         filled
-        :loading="loading"
         use-input
         input-debounce="0"
         :options="codesFiltered"
@@ -65,6 +64,7 @@
 
 <script>
 import { openURL } from 'quasar'
+import phoneCodes from 'assets/phone-codes.json'
 
 export default {
   name: 'PageIndex',
@@ -73,35 +73,21 @@ export default {
     return {
       codes: [],
       codesFiltered: [],
+      // TODO: store user selection in local storage
       code: null,
-      loading: false,
       number: null
     }
   },
-  async created () {
-    try {
-      this.loading = true
-      const { data } = await this.$axios.get('https://api.nimblebin.com/b/phone-codes')
+  created () {
+    this.codes = phoneCodes.content.list
 
-      this.codes = data.content.list
+    if (this.phone) {
+      // it starts with either '%2B' or '%20' (result of pasting number directly in the browser)
+      const hasPlus = this.phone.indexOf('+') === 0 ||
+        this.phone.indexOf(' ') === 0
 
-      if (this.phone) {
-        // it starts with either '%2B' or '%20' (result of pasting number directly in the browser)
-        const hasPlus = this.phone.indexOf('+') === 0 ||
-          this.phone.indexOf(' ') === 0
-
-        this.code = `+${this.phone.substring(hasPlus ? 1 : 0, hasPlus ? 3 : 2)}`
-        this.number = this.phone.substring(hasPlus ? 3 : 2)
-      }
-    } catch (error) {
-      this.$q.notify({
-        color: 'red-5',
-        textColor: 'white',
-        icon: 'fas fa-exclamation-triangle',
-        message: error.message || 'An unexpected error occurred when retrieving phone codes'
-      })
-    } finally {
-      this.loading = false
+      this.code = `+${this.phone.substring(hasPlus ? 1 : 0, hasPlus ? 3 : 2)}`
+      this.number = this.phone.substring(hasPlus ? 3 : 2)
     }
   },
   methods: {
